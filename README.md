@@ -3,6 +3,7 @@
 Forked from https://randomnerdtutorials.com/esp32-web-server-slider-pwm/
 
 Permission notice from source:
+```
 /*********
   Rui Santos
   Complete project details at https://RandomNerdTutorials.com/esp32-web-server-slider-pwm/
@@ -13,3 +14,4 @@ Permission notice from source:
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
 *********/
+```
