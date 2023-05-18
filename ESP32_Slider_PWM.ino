@@ -26,8 +26,8 @@ const char* VALUE_PARAM = "value";
 // Data that we store per-slider (on the Arduino, not in the webpage).
 struct Slider {
   int output;
-  int freq;
   int ledChannel;
+  int freq;
   int resolution;
   int value;
 };
@@ -36,6 +36,8 @@ typedef struct Slider Slider;
 // And we have this many sliders:
 const int numSliders = 2;
 Slider sliders[numSliders];
+
+// These sliders are configured in init()
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -128,17 +130,17 @@ String processor(const String& var){
 }
 
 void setup(){
-  // Slider 0 (we now use zero-indexing everywhere).
-  sliders[0].output = 2;
-  sliders[0].freq = 5000;
+  // Slider 0 (we now use zero-indexing everywhere):
+  sliders[0].output = 4;
   sliders[0].ledChannel = 0;
+  sliders[0].freq = 5000;
   sliders[0].resolution = 8;
   sliders[0].value = 0;
 
-  // Slider 1 - TODO - change these values.
-  sliders[1].output = 2;
+  // Slider 1:
+  sliders[1].output = 16;
+  sliders[1].ledChannel = 1;
   sliders[1].freq = 5000;
-  sliders[1].ledChannel = 0;
   sliders[1].resolution = 8;
   sliders[1].value = 0;
 
